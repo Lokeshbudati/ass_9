@@ -5,56 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automated Student Placement Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; }
-        header { background-color: #003366; color: white; padding: 20px; text-align: center; }
-        .container { max-width: 1200px; margin: 20px auto; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h2 { color: #003366; border-bottom: 2px solid #ee2c2c; padding-bottom: 5px; }
-        .stat { font-size: 24px; font-weight: bold; color: #2e7d32; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .status-badge { background: #2e7d32; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; }
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0d9488;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+        h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        .badge {
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background: #e5e7eb;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Automated Student Placement Portal</h1>
-        <p>University Placement Cell • Continuous Deployment System v1.0</p>
+        <h1>University Placement Portal</h1>
+        <p>Automated Recruitment & Campus Analytics</p>
     </header>
 
     <div class="container">
         <div class="grid">
             
             <div class="card">
-                <h2>Placement Statistics (Current Year)</h2>
-                <p>Total Eligible Students: <span class="stat">1,200</span></p>
-                <p>Placed Percentage: <span class="stat">84.5%</span></p>
-                <p>Highest Package Offered: <span class="stat">₹45.0 LPA</span></p>
-                <p>Average Package Offered: <span class="stat">₹8.5 LPA</span></p>
+                <h2>Student Profiles</h2>
+                <p><strong>Active Profiles:</strong> 1,240 Registered</p>
+                <p>Manage your resume, academic transcripts, and technical skill matrices all in one centralized hub.</p>
             </div>
 
             
             <div class="card">
-                <h2>Upcoming Recruitment Drives</h2>
+                <h2>Placement Statistics</h2>
+                <div class="stat-number">94.2%</div>
+                <p>Highest Package: <strong>₹45 LPA</strong></p>
+                <p>Average Package: <strong>₹8.5 LPA</strong></p>
+            </div>
+
+            
+            <div class="card">
+                <h2>Top Recruiters</h2>
                 <ul>
-                    <li><strong>Google Cloud India</strong> - Software Engineer <span class="status-badge">Eligible: CGPA > 8.0</span><br><small>Drive Date: Oct 28, 2026</small></li>
-                    <li><strong>Microsoft Development Center</strong> - Data Analyst <span class="status-badge">Eligible: B.Tech/M.Tech</span><br><small>Drive Date: Nov 02, 2026</small></li>
-                    <li><strong>Amazon AWS</strong> - Cloud Solutions Architect <span class="status-badge">Eligible: All Branches</span><br><small>Drive Date: Nov 15, 2026</small></li>
+                    <li>Google Cloud Systems</li>
+                    <li>Microsoft Enterprise</li>
+                    <li>Amazon Web Services</li>
+                    <li>TCS Digital</li>
                 </ul>
             </div>
 
             
             <div class="card">
-                <h2>Student Profile Sandbox</h2>
-                <p><strong>Name:</strong> Rahul Sharma</p>
-                <p><strong>Branch:</strong> Computer Science & Engineering</p>
-                <p><strong>CGPA:</strong> 8.74</p>
-                <p><strong>Verification Status:</strong> <span style="color: green; font-weight: bold;">Verified</span></p>
+                <h2>Upcoming Drives</h2>
+                <p><span class="badge">Live Now</span> <strong>Microsoft</strong> - Software Engineer Role</p>
+                <p><span class="badge" style="background:#fef3c7; color:#92400e;">Oct 25</span> <strong>Adobe</strong> - Product Intern</p>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 University Placement Cell. All deployments versioned via automated CI/CD.</p>
+    </footer>
 
 </body>
 </html>
